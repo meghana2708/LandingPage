@@ -1,0 +1,240 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+._b{
+    background-color: #dee2ff;
+}
+.body{
+   
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+ header{
+    background-image: url('https://www.smashingmagazine.com/files/wallpapers/mar-21/botanica/cal/mar-21-botanica-cal-1920x1080.jpg') !important;
+    height: 40vh;
+    width: 100vw;
+    padding: 20px;
+  
+} 
+div.td{
+      background-color: #9d8189;  
+    border-radius: 10px;
+    min-height: 40px;
+    width: 400px; 
+    padding: 10px;
+    position: relative;
+    bottom: 50px; 
+    /* display: flex;
+    flex-direction: column; */
+}
+.td_Li{
+     display: flex;
+    flex-direction: row;
+     text-align: center; 
+     align-items: center;  
+    justify-content: space-between;
+    color: aliceblue;
+}
+h1{
+  font-family:cursive;
+}
+/* .toggle_button{
+     padding: 2px;
+    border-radius: 5px;
+    width: 50px;
+    height: 25px;
+    background-color: #f5ebe0; 
+    /* width :100px; */
+    /* position: relative;
+    right: 15px; 
+    height: 100%;
+    background-color: violet;
+    border-style: none; */
+/* }
+.circle
+{   
+     cursor: pointer;
+    height: 20px;
+    width : 20px;
+    border-radius:60% ;
+    background-color: lawngreen;  */
+    /* width: 50px;
+    height: 20px;
+    background-color: green;
+    border-radius: 5px; */
+    
+/* }
+.circle::before{
+    right: 20px;
+}
+.circle:active::after{
+    left: 20px;
+}
+.toggle_button:checked{
+    content: "";
+    left: 15px;
+
+
+}
+.toggle_button:after{
+    display: none;
+    content: " D";
+} */
+/* .toggle_button:active .circle{
+    background-color: red;
+    animation: 1s move linear ;
+    animation-fill-mode: forwards;
+    animation-direction:alternate;
+    animation-iteration-count: 1;
+} */
+   /* .toggle_button:hover h1{
+     background-color: black;
+     color: lemonchiffon;
+ } */
+@keyframes move {
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+} 
+.addT{
+    width: 100%;
+    padding: 5px; 
+    background-color: #d5bdaf;
+    height: 40px;
+    margin: 0px;
+    border-radius: 5px;
+    text-align: center;
+    align-content: center;
+    margin-top: 20px;
+}
+ .add{
+    border-radius: 5px;
+    border-style: none;
+    width: 6%;
+    height: 100%;
+
+    background-color: #e3d5ca;
+
+}  
+.add_Task{
+    background-color: #e3d5ca;
+     display: flex;
+    flex-direction: row; 
+    height: 100%;
+     align-items: center;
+    justify-content: center; 
+    border-radius: 5px;
+}
+ .addtext{
+   
+    border-radius: 5px;
+    border-style: none;
+    width: 94%;
+    height: 100%;
+    place-content: "Add Task";
+    padding: 10px;
+    font-family: monospace;
+    background-color: #e3d5ca;
+} 
+.list{
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #d5bdaf;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+     display: none; 
+     position:var(add);
+}
+.listItems{
+    background-color: #d5bdaf;
+    border-style: none;
+    color:crimson;
+    font-weight: bolder;
+    font-size: 0.9rem; 
+}
+.add:hover + .list{
+     display: none ; 
+}
+
+
+
+/* .footer{
+    position: static;
+    bottom: 0px;
+    left: 0px;
+} */
+
+
+
+.mylabel{
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 30px;
+    
+    margin-top: 10px;
+    /* background-color: violet;  */
+    cursor: pointer;
+  }
+  
+  .mylabel input{
+    display: none;
+    
+    
+    width: 20px;
+    height: 40px;
+  }
+  
+  .slidinggroove{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+      background-color: white;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .slidinggroove:after{
+    position: absolute;
+    content: "🍁"; 
+    text-align: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: lawngreen;
+    top: 1px;
+    left: 1px;
+    transition: all 0.3s ease;
+  }
+  
+  input:checked + .slidinggroove{
+    background: grey;
+  }
+  
+  input:checked + .slidinggroove:after{
+  transform: translateX(30px);
+  }
+  input[type = "checkbox"]:checked ~ *{
+     box-shadow: -1000px 1000px 0 1600px rgb(0,0,0); 
+    
+    
+  }
+  .add:hover ~ .list{
+        display: block;
+  }
+ 
