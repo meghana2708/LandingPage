@@ -1,0 +1,561 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+     align-items: center; 
+     justify-content: center; 
+     
+}
+
+ 
+.header{
+    background-image: url('https://images.unsplash.com/photo-1468077218827-c65e763b0e32?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80');
+    height: 450px;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    margin: 0px;
+}
+  .navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 100px;
+    
+}  
+.navbar h5{
+     margin-left: 3rem; 
+    font-family: cursive;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+.hamburger{
+    -webkit-appearance: none;
+    display: none;
+}
+.icon{
+    display: none;
+    margin-top: 30px;
+    font-size: 40px;
+    position: absolute;
+    left: 0px;
+}
+.hidden_Navbar{
+    opacity: 0;
+    background-color: white;
+    position: absolute;
+    left: 0px;
+    top: 80px;
+}
+.hidden_Navbar li {
+    color: black;
+    
+}
+.hamburger:checked .hidden_Navbar{
+    display: block;
+}
+.food{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:30px;
+}
+.food h1{
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-family:monospace;
+    font-size: 4.5rem;
+    color: white;
+}
+.food h4{
+    font-family: cursive;
+    font-size: 2rem;
+    color:white;
+}
+.food h3{
+    font-family: cursive;
+    font-size: 2.1rem;
+    color: white;
+}
+.search_Bar{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: baseline;
+}
+.food input{
+    margin-top: 20px;
+    width: 50vw;
+    height: 5vh;
+    font-size: 1rem;
+    padding: 10px;
+    
+}
+.card{
+    margin: 10px;
+    margin-top: 30px;
+    display: flex;
+     justify-content: center;  
+    align-items: center;
+    flex-direction: row;
+
+}
+.card_Size{
+    height:250px ;
+    width: 240px;
+    margin: 10px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    
+    /* justify-content: start; */
+    
+}
+.card_Size:hover{
+    animation: 0.2s expand ease;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+@keyframes expand {
+    0%{
+        transform:scale3d(1,1,1)
+    }
+    100%{
+        transform: scale3d(
+            1.1,1.1,1.1
+        );
+    }
+}
+.card_Size img{
+    flex-basis: 80%;
+    max-width: 100%; 
+     height:180px ; 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.order{
+
+    flex-basis: 30%;
+    padding: 10px;
+    /* text-align:start; */
+    background-color: white;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    /* height: 60px; */
+    
+}
+.order h5{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    /* margin:5px; */
+    font-size: 0.9rem;
+    color: rgb(59, 58, 58);
+}
+.order p{
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    font-weight: 100;
+    font-size: 0.7rem;
+    color: gray;
+    margin-top: 5px;
+}
+.collections{
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 20px; */
+    margin-top: 50px;
+    
+    width: 100%;
+   
+}
+.collections h2{
+    font-size: 2.2rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+.collections p{
+    margin-top: 5px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.3rem;
+    font-weight:lighter;
+    color: rgb(150, 150, 150);
+}
+.collection_Images{
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap !important;
+}
+
+.collection_Images img{
+    content: "New in Town";
+    color: black;
+    border-radius: 10px;
+    flex-basis: 25%;
+    margin: 5px;
+    margin-top: 30px;
+    cursor: pointer;
+    height: 250px;
+    width: 140px;
+}
+.localities{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    padding: 0px;
+    
+}
+.Cities{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6px;
+    min-width: 240px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    height: 5em;
+    padding: 20px;
+    box-shadow: 0px  1.5px 5px lightgray;
+    margin-bottom: 15px;
+}
+.Cities div:nth-child(2){
+    font-weight: lighter;
+    font-family: monospace;
+    font-size: 20px;
+}
+.unit{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center; 
+   
+  
+}
+.popular_Localities{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    align-items: flex-start;
+    justify-content: baseline;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+.popular_Localities .line{
+    
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    color: rgb(59, 58, 58);
+}
+.localities{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.localities p{
+    font-stretch:ultra-condensed ;
+    
+    color: rgb(59, 58, 58);
+    font-size: 1.1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.localities h5{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: grey;
+    font-weight: 500;
+}
+.App{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* min-height: 50vh; */
+    background-color: rgb(250, 250, 240);
+    width: 100%;
+}
+.App img{
+    border-radius: 10px;
+    margin: 30px;
+   
+}
+.App .getApp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 40px;
+    height: 100%;
+   
+}
+.getApp h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 200;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+.getApp p{
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: gray;
+    margin-bottom: 30px;
+}
+.Checkbox{
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    margin-bottom: 20px;
+}
+.Checkbox input{
+    border-radius: 50%;
+    /* background: green; */
+    border: 1px solid gray;
+    
+    margin: 10px;
+    height: 20px;
+    width: 20px;
+    
+    -webkit-appearance: none;
+}
+.Checkbox input:checked{
+    content: " ";
+    background: plum;
+    padding: 5px;
+}
+label{
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.input_Share{
+    display: flex;
+    justify-content: space-around;
+}
+.Email{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+}
+.Phone{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.emailInput{
+    border: 1px solid lightgray;
+    height: 50px;
+    width: 250px;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 5px;
+    color: black;
+    padding: 5px;
+   
+}
+.PhoneInput{
+    border: 1px solid lightgray;
+    height: 50px;
+    width: 250px;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 5px;
+    color: black;
+    padding: 5px;
+    display: none;
+}
+.input_Share button{
+    height: 50px;
+    border-radius: 5px;
+    border:none;
+    background-color:plum ;
+    margin-left: 5px;
+    width: 150px;
+    padding: 5px;
+    cursor: pointer;
+}
+.Explore{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    width: 100%;
+   
+    margin-top: 50px;
+    /* min-height: 500px; */
+}
+.list{
+    flex-wrap: wrap;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 70px;
+    border-radius: 5px;
+    width: 100%;
+    border:1px solid lightgray;
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    color: rgb(59, 58, 58);
+}
+.Explore h5{
+    font-family: cursive;
+    font-size: 30px;
+    font-weight: 200;
+    color: rgb(59, 58, 58);
+}
+.Explore h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+div.hidden{
+    border: none;
+    margin: 0px;
+    color: gray;
+    display: none;
+    font-size: 15px;
+}
+
+  .list:hover div.hidden{
+     display: block;
+ }  
+ footer{
+     min-height: 300px;
+     margin-top: 50px;
+     background-color: rgb(247, 243, 243);
+    width: 100%;
+ }
+section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+footer div{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(59, 58, 58);
+}
+li{
+    color: gray;
+    font-family:Verdana;
+    margin: 10px; 
+    
+}
+footer p{
+    color: rgb(59, 58, 58);
+    margin: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+}
+@media  screen and (min-width:1000px) {
+    .card_Size{
+        height:250px ;
+        width: 300px;
+        margin: 10px;
+        border: 1px solid lightgrey;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        
+        /* justify-content: start; */
+        
+    }
+    .unit{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        justify-content: flex-end; 
+         width: 1000px; 
+        /* margin-left: 250px; */
+    }
+    .collection_Images img{
+         height: 300px;
+         display: flex;
+         align-items: flex-start;
+    }
+    .App{
+        width: 100%;
+       
+    }
+    .Cities{
+        width: 32%;
+    }
+   
+    
+}
+ @media  screen and (max-width:786px) {
+    .card_Size{
+        height:210px ;
+        width: 200px;
+        margin: 5px;
+        border: 1px solid lightgrey;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        
+        /* justify-content: start; */
+        
+     } 
+     .card_Size img{
+        flex-basis: 80%;
+        max-width: 100%; 
+         height:80% ; 
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px; 
+     } 
+    .unit{width: 100%;
+    }
+    .App{
+        width: 100%;
+    }
+    .App img{
+        
+        display: none;
+    }
+    .App .getApp{
+        margin: 10px;
+    }
+    .food h4{
+        display: none;
+    }
+    .food h3{
+        display: none;
+    }
+    .header{
+        height: 350px;
+    }
+    .search_Bar input{
+        width: 95vw;
+    }
+    .navbar h5{
+        display: none;
+    }
+    .icon{
+        display: block;
+    }
+    input.hamburger:checked .hidden_Navbar{
+        opacity: 1;
+    }
+ } 
